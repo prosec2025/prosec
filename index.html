@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosec</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        nav {
+            background-color: #043B2C;
+            color: white;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav .logo {
+            display: flex;
+            align-items: center;
+        }
+        nav .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 5px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        #about, #services, #contact {
+            padding: 50px 20px;
+        }
+        h1, h2 {
+            color: #043B2C;
+            margin-bottom: 20px;
+        }
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .service-card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .service-card .content {
+            padding: 20px;
+        }
+        .service-card h3 {
+            margin: 0 0 10px;
+        }
+        .service-card p {
+            margin: 0;
+            color: #555;
+        }
+        footer {
+            background-color: #043B2C;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="prosec.jpeg" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="about" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 20px;">
+        <div style="flex: 1; min-width: 300px;">
+            <h1>Your Trusted Cyber Security partner</h1>
+            <p>At Prosec, We specialize in comprehensive cyber security servces, including pentesting, cloud security and Infra security. dedicated to protecting your digital assets and ensuring your business stays secure in an ever-evolving threat landscape.</p>
+        </div>
+        <div style="flex: 1; min-width: 300px;">
+            <img src="about_us.jpg" alt="About Us" style="width: 100%; max-width: 400px; border-radius: 10px;">
+        </div>
+    </section>
+
+    <section id="services" style="background-color: #E1EAE8;">
+        <h2>Services</h2>
+        <!-- <p style="width: 200px;">Expert solutions for Penetration testing, Cloud assessment and Infrastructure assessment for your company.</p> -->
+        <div class="service-container">
+            <div class="service-card">
+                <img src="pentesting.jpg" alt="Pentesting">
+                <div class="content">
+                    <h3>Penetration testing</h3>
+                    <p>Identify vulnerabilities in your systems through comprehensive penetration testing.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="cloud.jpg" alt="Cloud Assessment">
+                <div class="content">
+                    <h3>Cloud Assessment</h3>
+                    <p>Ensure your cloud infrastructure is secure and compliant with industry standards.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="infrastructure.jpeg" alt="Infrastructure Assessment">
+                <div class="content">
+                    <h3>Infrastructure Assessment</h3>
+                    <p>Evaluate and secure your IT infrastructure to mitigate risks and enhance resilience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <section id="contact" style="display: flex; align-items: center; justify-content:center; flex-wrap: wrap; gap: 20px;">
+        <div style="flex: 1; min-width: 300px;">
+            <img src="prosec_logo.jpeg" alt="Contact" style="width: 100%; max-width: 300px; border-radius: 10px;">
+        </div>
+        <div style="flex: 1; min-width: 300px;">
+            <h2>Contact Us</h2>
+            <p>support@prosec.co.in</p>
+            <p>+91 89716 61633</p>
+            <p>123 Cyber Security Lane, Tech City</p>
+            <a href="https://prosec.co.in">prosec.co.in</a>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>Prosec</p>
+        <span style="font-size: x-small;font-style:italic">Expert cyber security solution for your business</span>
+        <p>&copy; 2025 Prosec. All rights reserved.</p>
+    </footer>
+</body>
+</html>
