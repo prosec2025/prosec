@@ -1,197 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prosec</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        nav {
-            background-color: #043B2C;
-            color: white;
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        nav .logo {
-            display: flex;
-            align-items: center;
-        }
-        nav .logo img {
-            height: 40px;
-            margin-right: 10px;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0 5px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-        }
-        nav ul li a:hover {
-            background-color: #575757;
-            border-radius: 5px;
-        }
-        section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-        #about, #services, #contact {
-            padding: 50px 20px;
-        }
-        h1, h2 {
-            color: #043B2C;
-            margin-bottom: 20px;
-        }
-        .service-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .service-card {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        }
-        .service-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .service-card .content {
-            padding: 20px;
-        }
-        .service-card h3 {
-            margin: 0 0 10px;
-        }
-        .service-card p {
-            margin: 0;
-            color: #555;
-        }
-        footer {
-            background-color: #043B2C;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prosec</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
-<body>
-    <nav>
-        <div class="logo">
-            <img src="prosec.jpeg" alt="Logo">
-        </div>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <section id="about" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 20px;">
-        <div style="flex: 1; min-width: 300px;">
-            <h1>Your Trusted Cyber Security partner</h1>
-            <p>At Prosec, We specialize in comprehensive cyber security servces, including pentesting, cloud security and Infra security. dedicated to protecting your digital assets and ensuring your business stays secure in an ever-evolving threat landscape.</p>
-        </div>
-        <div style="flex: 1; min-width: 300px;">
-            <img src="about_us.jpg" alt="About Us" style="width: 100%; max-width: 400px; border-radius: 10px;">
-        </div>
-    </section>
+<body class="bg-gray-900 text-white">
+  <!-- Header -->
+  <header class="bg-gray-800 shadow">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-2xl font-bold text-blue-400">Prosec</h1>
+      <nav class="space-x-6 text-sm">
+        <a href="#about" class="hover:text-blue-400">About</a>
+        <a href="#services" class="hover:text-blue-400">Services</a>
+        <a href="#contact" class="hover:text-blue-400">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <section id="services" style="background-color: #E1EAE8;">
-        <h2>Services</h2>
-        <!-- <p style="width: 200px;">Expert solutions for Penetration testing, Cloud assessment and Infrastructure assessment for your company.</p> -->
-        <div class="service-container">
-            <div class="service-card">
-                <img src="pentesting.jpg" alt="Pentesting">
-                <div class="content">
-                    <h3>Penetration testing</h3>
-                    <p>Simulate real-world cyberattacks to uncover security gaps before malicious actors do. Our comprehensive penetration testing evaluates networks, applications, APIs, and endpoints to identify vulnerabilities, misconfigurations, and potential exploits, providing actionable insights to strengthen your defenses</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="cloud.jpg" alt="Cloud Assessment">
-                <div class="content">
-                    <h3>Cloud Assessment</h3>
-                    <p>Assess the security posture of your cloud environments — AWS, Azure, GCP, or hybrid — against industry standards and best practices. We identify misconfigurations, insecure access controls, and compliance risks, helping you harden your cloud infrastructure and safeguard critical assets.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="infrastructure.jpeg" alt="Infrastructure Assessment">
-                <div class="content">
-                    <h3>Infrastructure Assessment</h3>
-                    <p>Evaluate the resilience of your internal and external IT infrastructure, including servers, databases, and network devices. Our infrastructure security assessment highlights weaknesses, recommends architecture improvements, and ensures your foundational systems are aligned with security benchmarks.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="sca.png" alt="Infrastructure Assessment">
-                <div class="content">
-                    <h3>Source Code Analysis</h3>
-                    <p>Analyze application source code to detect security flaws like injection vulnerabilities, authentication issues, and insecure dependencies early in the development lifecycle. Our secure code review combines automated scanning and manual analysis to ensure your software is built with security in mind.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="container-image.jpeg" alt="Infrastructure Assessment">
-                <div class="content">
-                    <h3>Container Image Analysis</h3>
-                    <p>Scan and audit container images for vulnerabilities, misconfigurations, and compliance violations before they reach production.</p>
-                </div>
-            </div>
-            
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-900 to-gray-800 py-20">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Your Trusted Cyber Security Partner</h2>
+      <p class="text-lg text-gray-300 mb-6">We specialize in comprehensive cybersecurity services, including penetration testing, cloud security, and infrastructure assessments.</p>
+      <a href="#services" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-12">Services</h3>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Service Card -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <img src="pentesting.jpg" alt="Pentesting" class="w-full h-48 object-cover rounded-md mb-4">
+          <h4 class="text-xl font-semibold mb-2">Penetration Testing</h4>
+          <p class="text-gray-400">Simulate real-world cyberattacks to uncover security gaps before malicious actors do. Our comprehensive penetration testing evaluates networks, applications, APIs, and endpoints to identify vulnerabilities, misconfigurations, and potential exploits, providing actionable insights to strengthen your defenses</p>
         </div>
-    </section>
+        <!-- Service Card -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition" >
+          <img src="cloud.jpg" alt="Cloud Assessment" class="w-full h-48 object-cover rounded-md mb-4">
+          <h4 class="text-xl font-semibold mb-2">Cloud Assessment</h4>
+          <p class="text-gray-400">Assess the security posture of your cloud environments — AWS, Azure, GCP, or hybrid — against industry standards and best practices. We identify misconfigurations, insecure access controls, and compliance risks, helping you harden your cloud infrastructure and safeguard critical assets.</p>
+        </div>
+        <!-- Service Card -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <img src="infrastructure.jpeg" alt="Infrastructure Assessment" class="w-full h-48 object-cover rounded-md mb-4">
+          <h4 class="text-xl font-semibold mb-2">Infrastructure Assessment</h4>
+          <p class="text-gray-400">Evaluate the resilience of your internal and external IT infrastructure, including servers, databases, and network devices. Our infrastructure security assessment highlights weaknesses, recommends architecture improvements, and ensures your foundational systems are aligned with security benchmarks.</p>
+        </div>
+        <!-- Service Card -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <img src="sca.png" alt="sca" class="w-full h-48 object-cover rounded-md mb-4">
+          <h4 class="text-xl font-semibold mb-2">Source Code Analysis</h4>
+          
+          <p class="text-gray-400">Analyze application source code to detect security flaws like injection vulnerabilities, authentication issues, and insecure dependencies early in the development lifecycle. Our secure code review combines automated scanning and manual analysis to ensure your software is built with security in mind.</p>
+        </div>
+        <!-- Service Card -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+            <img src="docker-image-dark.png" alt="Infrastructure Assessment" class="w-full h-48 object-cover rounded-md mb-4">
+          <h4 class="text-xl font-semibold mb-2">Container Image Analysis</h4>
+          <p class="text-gray-400">Scan and audit container images for vulnerabilities, misconfigurations, and compliance violations before they reach production.</p>
+        </div>
+        <!-- Service Card -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <img src="soc2.png" alt="Infrastructure Assessment" class="w-full h-48 object-cover rounded-md mb-4">
+          <h4 class="text-xl font-semibold mb-2">SOC 2 Compliance</h4>
+          <p class="text-gray-400">Prepare your organization for SOC 2 certification with a full readiness assessment, gap analysis, and remediation guidance.</p>
+        </div>
+         <!-- Service Card -->
+         <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <img src="licenses.png" alt="License" class="w-full h-48 object-cover rounded-md mb-4">
+          <h4 class="text-xl font-semibold mb-2">License Validation</h4>
+          <p class="text-gray-400">Verify and enforce software licenses to prevent unauthorized access, ensure compliance, and manage entitlements across your applications and environments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-800">
     
-    <section id="contact" style="display: flex; align-items: center; justify-content:center; flex-wrap: wrap; gap: 20px;">
-        <div style="flex: 1; min-width: 300px;">
-            <img src="prosec_logo.jpeg" alt="Contact" style="width: 100%; max-width: 300px; border-radius: 10px;">
-        </div>
-        <div style="flex: 1; min-width: 300px;">
-            <h2>Contact Us</h2>
-            <p>contactus@prosec.co.in</p>
-            <p>123 Cyber Security Lane, Tech City</p>
-            <a href="https://prosec.co.in">prosec.co.in</a>
-        </div>
-        
-    </section>
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <img src="prosec_logo.jpeg" alt="prosec" class="mx-auto mb-6 w-32 h-auto">
+      <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
+      <p class="text-gray-400 mb-4">Email: <a href="mailto:contactus@prosec.co.in" class="text-blue-400 hover:underline">contactus@prosec.co.in</a></p>
+      <p class="text-gray-400">Address: 123 Cyber Security Lane, Tech City</p>
+      
+    </div>
+  </section>
 
-    <section style="background-color: #E1EAE8;" >
-        <div style="flex: 1; min-width: 300px;margin:5%;padding:2%; background-color:white;border-radius: 10px;" >
-            <h3>SOC 2 Compliance</h3>
-            <p>Prepare your organization for SOC 2 certification with a full readiness assessment, gap analysis, and remediation guidance. We help design and document security controls aligned with Trust Services Criteria, ensuring you meet auditor expectations and build customer trust</p>
-        </div>
-        
-    </section>
-    <footer>
-        <p>Prosec</p>
-        <span style="font-size: x-small;font-style:italic">Expert cyber security solution for your business</span>
-        <p>&copy; 2025 Prosec. All rights reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-center py-6 text-gray-500 text-sm">
+    © 2025 Prosec. All rights reserved.
+  </footer>
 </body>
 </html>
